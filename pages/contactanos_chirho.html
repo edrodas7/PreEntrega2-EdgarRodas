@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CHIRHO - Contáctanos para más información sobre nuestros servicios">
+  <title>CHIRHO - Contáctanos</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="icon" href="../assets/logo_chirho.png" type="image/png">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="../index_chirho.html">
+        <img src="../assets/logo_chirho.png" alt="Logo CHIRHO" class="logo-navbar me-2">
+        <span class="fw-bold">CHIRHO</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index_chirho.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./quienes_somos_chirho.html">Quiénes Somos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Servicios
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./asesoria_acompañamiento_chirho.html">Asesoría y Acompañamiento</a></li>
+              <li><a class="dropdown-item" href="./inspeccion_auditoria_chirho.html">Inspección y Auditoría</a></li>
+              <li><a class="dropdown-item" href="./cursos_chirho.html">Cursos</a></li>
+              <li><a class="dropdown-item" href="./control_vigilancia_chirho.html">Control y Vigilancia</a></li>
+              <li><a class="dropdown-item" href="./respuesta_emergencias_chirho.html">Respuesta a Emergencias</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./contactanos_chirho.html">Contáctanos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header bg-primary text-white py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <i class="bi bi-envelope display-4 mb-3"></i>
+          <h1 class="display-5 fw-bold">Contáctanos</h1>
+          <p class="lead">Estamos aquí para ayudarte</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="fw-bold text-primary mb-4">Envíanos un mensaje</h3>
+              <form action="#" method="POST">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="telefono" class="form-label">Teléfono (opcional)</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="+502 1234-5678">
+                  </div>
+                  <div class="col-12">
+                    <label for="asunto" class="form-label">Asunto</label>
+                    <select class="form-select" id="asunto" name="asunto" required>
+                      <option value="" selected disabled>Selecciona un tema</option>
+                      <option value="asesoria">Asesoría y Acompañamiento</option>
+                      <option value="inspeccion">Inspección y Auditoría</option>
+                      <option value="cursos">Cursos y Capacitaciones</option>
+                      <option value="control">Control y Vigilancia</option>
+                      <option value="emergencias">Respuesta a Emergencias</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Déjanos tu mensaje, sugerencia o petición" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-grid gap-2 d-md-flex">
+                      <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="bi bi-send me-2"></i>Enviar mensaje
+                      </button>
+                      <button type="reset" class="btn btn-outline-secondary btn-lg">
+                        <i class="bi bi-arrow-counterclockwise me-2"></i>Limpiar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-5">
+          <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+              <h4 class="fw-bold text-primary mb-4">Información de contacto</h4>
+              <div class="d-flex mb-4">
+                <div class="icon-circle bg-primary text-white me-3 flex-shrink-0">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Correo electrónico</h6>
+                  <a href="mailto:info@chirho.com" class="text-muted text-decoration-none">info@chirho.com</a>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <div class="icon-circle bg-primary text-white me-3 flex-shrink-0">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Teléfono</h6>
+                  <a href="tel:+50212345678" class="text-muted text-decoration-none">+502 1234-5678</a>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="icon-circle bg-primary text-white me-3 flex-shrink-0">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Ubicación</h6>
+                  <p class="text-muted mb-0">Ciudad de Guatemala, Guatemala</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <h4 class="fw-bold text-primary mb-4">Síguenos en redes sociales</h4>
+              <div class="d-flex gap-3">
+                <a href="#" class="btn btn-outline-primary btn-lg rounded-circle" aria-label="Facebook">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-outline-primary btn-lg rounded-circle" aria-label="Instagram">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="btn btn-outline-primary btn-lg rounded-circle" aria-label="X">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="#" class="btn btn-outline-primary btn-lg rounded-circle" aria-label="YouTube">
+                  <i class="bi bi-youtube"></i>
+                </a>
+                <a href="#" class="btn btn-outline-primary btn-lg rounded-circle" aria-label="WhatsApp">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+          <img src="../assets/logo_chirho.png" alt="Logo CHIRHO" class="logo-footer me-2">
+          <span class="fw-bold">CHIRHO</span>
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <img src="../assets/facebook_logo_chirho.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <img src="../assets/instagram_logo_chirho.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="#" class="social-link" aria-label="X">
+              <img src="../assets/x_logo_chirho.png" alt="X" class="social-icon">
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <img src="../assets/yt_logo_chirho.png" alt="YouTube" class="social-icon">
+            </a>
+            <a href="#" class="social-link" aria-label="WhatsApp">
+              <img src="../assets/whatsapp_logo_chirho.png" alt="WhatsApp" class="social-icon">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 text-center text-md-end">
+          <p class="mb-0 small">&copy; 2024 CHIRHO. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
