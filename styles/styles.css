@@ -1,3 +1,34 @@
+.icon-circle, .icon-box, .btn.rounded-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon, .form-control,
+.form-select, .btn, .service-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.social-icon {
+  object-fit: contain;
+}
+
+.btn {
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control,
+.form-select {
+  border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -183,17 +214,11 @@ footer {
   }
 }
 .btn {
-  border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
 }
 .btn.rounded-circle {
   width: 50px;
   height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0;
 }
 
@@ -239,13 +264,6 @@ footer {
 }
 
 .service-card {
-  transition: all 0.3s ease-in-out;
-}
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-.service-card {
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -257,10 +275,7 @@ footer {
 }
 .form-control,
 .form-select {
-  border-radius: 0.5rem;
   padding: 0.75rem 1rem;
-  border: 1px solid #dee2e6;
-  transition: all 0.3s ease-in-out;
 }
 .form-control:focus,
 .form-select:focus {
@@ -276,9 +291,6 @@ footer {
 .icon-circle {
   width: 48px;
   height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 50%;
   font-size: 1.25rem;
 }
@@ -286,16 +298,11 @@ footer {
 .icon-box {
   width: 80px;
   height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .social-icon {
   width: 30px;
   height: 30px;
-  object-fit: contain;
-  transition: all 0.3s ease-in-out;
   filter: brightness(0) invert(1);
 }
 

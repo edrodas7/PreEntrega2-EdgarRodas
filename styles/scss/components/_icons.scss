@@ -8,23 +8,28 @@
 // Icon Circle (iconos pequenos en circulos)
 // ------------------------------------------------
 .icon-circle {
-  @include icon-circle($icon-circle-size, 1.25rem);
+  @extend %flex-center;  // Usa @extend para centrado
+  @include icon-size($icon-circle-size);
+  border-radius: 50%;
+  font-size: 1.25rem;
 }
 
 // ------------------------------------------------
 // Icon Box (iconos grandes)
 // ------------------------------------------------
 .icon-box {
+  @extend %flex-center;  // Usa @extend para centrado
   @include icon-size($icon-box-size);
-  @include flex-center;
 }
 
 // ------------------------------------------------
 // Social Icons
+// Usando @extend para estilos compartidos
 // ------------------------------------------------
 .social-icon {
-  @include object-contain($social-icon-size);
-  @include transition;
+  @extend %object-contain;  // Usa @extend para object-fit
+  @extend %transition-base;  // Usa @extend para transicion
+  @include icon-size($social-icon-size);
   filter: brightness(0) invert(1);
 }
 

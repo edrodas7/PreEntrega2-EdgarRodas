@@ -1,0 +1,87 @@
+// ================================================
+// PLACEHOLDERS (para @extend)
+// ================================================
+
+@use 'variables' as *;
+
+// ------------------------------------------------
+// Flexbox centrado
+// ------------------------------------------------
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ------------------------------------------------
+// Transicion suave
+// ------------------------------------------------
+%transition-base {
+  transition: $chirho-transition;
+}
+
+// ------------------------------------------------
+// Sombra al hover
+// ------------------------------------------------
+%shadow-on-hover {
+  @extend %transition-base;
+
+  &:hover {
+    box-shadow: $chirho-shadow;
+  }
+}
+
+// ------------------------------------------------
+// Efecto elevacion (card)
+// ------------------------------------------------
+%card-elevation {
+  @extend %transition-base;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $chirho-shadow;
+  }
+}
+
+// ------------------------------------------------
+// Objeto contenido (imagenes/logos)
+// ------------------------------------------------
+%object-contain {
+  object-fit: contain;
+}
+
+// ------------------------------------------------
+// Texto truncado con ellipsis
+// ------------------------------------------------
+%text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// ------------------------------------------------
+// Reset de lista
+// ------------------------------------------------
+%list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// ------------------------------------------------
+// Boton base
+// ------------------------------------------------
+%btn-base {
+  border-radius: $chirho-border-radius;
+  font-weight: $chirho-font-weight-medium;
+  @extend %transition-base;
+}
+
+// ------------------------------------------------
+// Input base
+// ------------------------------------------------
+%input-base {
+  border-radius: $chirho-border-radius;
+  border: 1px solid $chirho-gray;
+  @extend %transition-base;
+}

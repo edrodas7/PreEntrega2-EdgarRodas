@@ -13,9 +13,10 @@
 
 // ------------------------------------------------
 // Service Card (con efecto hover)
+// Usando @extend para heredar estilos
 // ------------------------------------------------
 .service-card {
-  @include card-hover;
+  @extend %card-elevation;  // Usa @extend para el efecto hover
   border-radius: $chirho-border-radius;
   overflow: hidden;
 }

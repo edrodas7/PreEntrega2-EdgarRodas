@@ -6,10 +6,12 @@
 
 // ------------------------------------------------
 // Form controls
+// Usando @extend para estilos base de inputs
 // ------------------------------------------------
 .form-control,
 .form-select {
-  @include form-control-base;
+  @extend %input-base;  // Usa @extend para estilos base
+  padding: 0.75rem $spacing-md;
 
   &:focus {
     border-color: $chirho-primary;

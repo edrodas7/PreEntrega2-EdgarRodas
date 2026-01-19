@@ -6,14 +6,16 @@
 
 // ------------------------------------------------
 // Estilos base de botones
+// Usando @extend para heredar estilos base
 // ------------------------------------------------
 .btn {
-  @include btn-base;
+  @extend %btn-base;  // Usa @extend para estilos base
+  padding: $spacing-sm $spacing-lg;
 
   // Boton circular (redes sociales)
   &.rounded-circle {
+    @extend %flex-center;  // Usa @extend para centrado flex
     @include icon-size($btn-circle-size);
-    @include flex-center;
     padding: 0;
   }
 }
