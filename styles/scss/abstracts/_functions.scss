@@ -1,0 +1,146 @@
+// ================================================
+// FUNCIONES Y OPERADORES SASS - CHIRHO
+// Uso de @each, @for, maps para clases dinamicas
+// ================================================
+
+@use 'variables' as *;
+
+// ------------------------------------------------
+// Mapa de colores del tema
+// ------------------------------------------------
+$theme-colors: (
+  'primary': $chirho-primary,
+  'primary-light': $chirho-primary-light,
+  'primary-dark': $chirho-primary-dark,
+  'secondary': $chirho-secondary,
+  'accent': $chirho-accent,
+  'light': $chirho-light,
+  'dark': $chirho-dark,
+  'white': $chirho-white
+);
+
+// ------------------------------------------------
+// Generar clases de color con @each
+// Genera: .text-chirho-primary, .bg-chirho-primary, etc.
+// ------------------------------------------------
+@each $name, $color in $theme-colors {
+  .text-chirho-#{$name} {
+    color: $color !important;
+  }
+
+  .bg-chirho-#{$name} {
+    background-color: $color !important;
+  }
+
+  .border-chirho-#{$name} {
+    border-color: $color !important;
+  }
+}
+
+// ------------------------------------------------
+// Mapa de espaciados
+// ------------------------------------------------
+$spacings: (
+  '0': 0,
+  '1': $spacing-xs,
+  '2': $spacing-sm,
+  '3': $spacing-md,
+  '4': $spacing-lg,
+  '5': $spacing-xl
+);
+
+// ------------------------------------------------
+// Generar clases de margin y padding con @each
+// Genera: .m-chirho-1, .p-chirho-2, .mt-chirho-3, etc.
+// ------------------------------------------------
+$spacing-directions: (
+  '': '',
+  't': '-top',
+  'b': '-bottom',
+  'l': '-left',
+  'r': '-right'
+);
+
+@each $size-name, $size-value in $spacings {
+  @each $dir-name, $dir-value in $spacing-directions {
+    // Margin
+    .m#{$dir-name}-chirho-#{$size-name} {
+      margin#{$dir-value}: $size-value !important;
+    }
+
+    // Padding
+    .p#{$dir-name}-chirho-#{$size-name} {
+      padding#{$dir-value}: $size-value !important;
+    }
+  }
+}
+
+// ------------------------------------------------
+// Mapa de tamanios de fuente
+// ------------------------------------------------
+$font-sizes: (
+  'xs': 0.75rem,
+  'sm': 0.875rem,
+  'base': 1rem,
+  'lg': 1.125rem,
+  'xl': 1.25rem,
+  '2xl': 1.5rem,
+  '3xl': 2rem
+);
+
+// ------------------------------------------------
+// Generar clases de font-size con @each
+// Genera: .fs-chirho-xs, .fs-chirho-sm, etc.
+// ------------------------------------------------
+@each $name, $size in $font-sizes {
+  .fs-chirho-#{$name} {
+    font-size: $size !important;
+  }
+}
+
+// ------------------------------------------------
+// Generar clases de border-radius con @for
+// Genera: .rounded-chirho-1, .rounded-chirho-2, etc.
+// ------------------------------------------------
+@for $i from 1 through 5 {
+  .rounded-chirho-#{$i} {
+    border-radius: $i * 0.25rem !important;
+  }
+}
+
+// ------------------------------------------------
+// Mapa de opacidades
+// ------------------------------------------------
+$opacities: (
+  '0': 0,
+  '25': 0.25,
+  '50': 0.5,
+  '75': 0.75,
+  '100': 1
+);
+
+// ------------------------------------------------
+// Generar clases de opacidad con @each
+// Genera: .opacity-chirho-25, .opacity-chirho-50, etc.
+// ------------------------------------------------
+@each $name, $value in $opacities {
+  .opacity-chirho-#{$name} {
+    opacity: $value !important;
+  }
+}
+
+// ------------------------------------------------
+// Generar clases de sombra con @each
+// ------------------------------------------------
+$shadows: (
+  'none': none,
+  'sm': $chirho-shadow-sm,
+  'default': $chirho-shadow,
+  'lg': 0 1rem 2rem rgba(0, 0, 0, 0.2)
+);
+
+@each $name, $shadow in $shadows {
+  .shadow-chirho-#{$name} {
+    box-shadow: $shadow !important;
+  }
+}

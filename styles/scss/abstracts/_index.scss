@@ -1,8 +1,9 @@
 // ================================================
 // ABSTRACTS - Index
 // ================================================
-// Importar primero variables, luego mixins y placeholders
+// Importar primero variables, luego mixins, placeholders y functions
 
 @forward 'variables';
 @forward 'mixins';
 @forward 'placeholders';
+@forward 'functions';
