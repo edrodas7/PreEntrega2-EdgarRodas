@@ -1,0 +1,31 @@
+// ================================================
+// DROPDOWN MENU
+// ================================================
+
+@use '../abstracts' as *;
+
+// ------------------------------------------------
+// Dropdown menu base
+// ------------------------------------------------
+.dropdown-menu {
+  border: none;
+  box-shadow: $chirho-shadow;
+  border-radius: $chirho-border-radius;
+}
+
+// ------------------------------------------------
+// Dropdown items
+// ------------------------------------------------
+.dropdown-item {
+  padding: $spacing-sm $spacing-lg;
+  @include transition;
+
+  &:hover {
+    background-color: $chirho-primary;
+    color: $chirho-white;
+  }
+
+  &.active {
+    background-color: $chirho-primary;
+  }
+}

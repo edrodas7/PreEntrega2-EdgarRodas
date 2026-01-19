@@ -1,0 +1,41 @@
+// ================================================
+// UTILIDADES
+// ================================================
+
+@use '../abstracts' as *;
+
+// ------------------------------------------------
+// Sombra al hover
+// ------------------------------------------------
+.shadow-hover {
+  &:hover {
+    box-shadow: $chirho-shadow !important;
+  }
+}
+
+// ------------------------------------------------
+// Text decoration
+// ------------------------------------------------
+.text-decoration-none {
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+// ------------------------------------------------
+// Bordes redondeados extra
+// ------------------------------------------------
+.rounded-4 {
+  border-radius: $chirho-border-radius-lg !important;
+}
+
+// ------------------------------------------------
+// Colores Bootstrap override
+// ------------------------------------------------
+.bg-primary {
+  background-color: $chirho-primary !important;
+}
+
+.text-primary {
+  color: $chirho-primary !important;
+}

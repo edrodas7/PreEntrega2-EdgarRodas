@@ -1,0 +1,21 @@
+// ================================================
+// ESTILOS DE IMPRESION
+// ================================================
+
+@use '../abstracts' as *;
+
+// ------------------------------------------------
+// Print styles
+// ------------------------------------------------
+@include respond-to('print') {
+  .navbar,
+  footer,
+  .btn {
+    display: none !important;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: $spacing-xl 0;
+  }
+}

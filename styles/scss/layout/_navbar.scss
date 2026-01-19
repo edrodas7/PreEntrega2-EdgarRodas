@@ -1,0 +1,47 @@
+// ================================================
+// NAVBAR
+// ================================================
+
+@use '../abstracts' as *;
+
+// ------------------------------------------------
+// Navbar base
+// ------------------------------------------------
+.navbar {
+  padding: 0.75rem 0;
+  box-shadow: $chirho-shadow-sm;
+}
+
+// ------------------------------------------------
+// Logo navbar
+// ------------------------------------------------
+.logo-navbar {
+  @include object-contain($logo-navbar-size);
+}
+
+// ------------------------------------------------
+// Nav links
+// ------------------------------------------------
+.navbar-nav {
+  .nav-link {
+    padding: $spacing-sm $spacing-md;
+    font-weight: $chirho-font-weight-medium;
+    @include transition;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+// ------------------------------------------------
+// Navbar collapse (responsive)
+// ------------------------------------------------
+@include respond-to('lg') {
+  .navbar-collapse {
+    background-color: $chirho-primary;
+    padding: $spacing-md;
+    margin-top: $spacing-sm;
+    border-radius: $chirho-border-radius;
+  }
+}

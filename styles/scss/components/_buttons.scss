@@ -1,0 +1,80 @@
+// ================================================
+// BOTONES
+// ================================================
+
+@use '../abstracts' as *;
+
+// ------------------------------------------------
+// Estilos base de botones
+// ------------------------------------------------
+.btn {
+  @include btn-base;
+
+  // Boton circular (redes sociales)
+  &.rounded-circle {
+    @include icon-size($btn-circle-size);
+    @include flex-center;
+    padding: 0;
+  }
+}
+
+.btn-lg {
+  padding: 0.75rem $spacing-xl;
+}
+
+// ------------------------------------------------
+// Boton Primary - Sobrescritura Bootstrap
+// ------------------------------------------------
+.btn-primary {
+  background-color: $chirho-primary;
+  border-color: $chirho-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $chirho-primary-dark;
+    border-color: $chirho-primary-dark;
+  }
+}
+
+// ------------------------------------------------
+// Boton Outline Primary
+// ------------------------------------------------
+.btn-outline-primary {
+  color: $chirho-primary;
+  border-color: $chirho-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $chirho-primary;
+    border-color: $chirho-primary;
+    color: $chirho-white;
+  }
+}
+
+// ------------------------------------------------
+// Boton Light
+// ------------------------------------------------
+.btn-light {
+  &:hover {
+    background-color: $chirho-gray-dark;
+  }
+}
+
+// ------------------------------------------------
+// Boton Outline Light
+// ------------------------------------------------
+.btn-outline-light {
+  &:hover {
+    color: $chirho-primary;
+  }
+}
+
+// ------------------------------------------------
+// Responsive - Botones
+// ------------------------------------------------
+@include respond-to('md') {
+  .btn-lg {
+    padding: $spacing-sm $spacing-lg;
+    font-size: $spacing-md;
+  }
+}

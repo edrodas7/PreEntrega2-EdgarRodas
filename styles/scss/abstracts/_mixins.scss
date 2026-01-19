@@ -1,0 +1,154 @@
+// ================================================
+// MIXINS SASS - CHIRHO
+// ================================================
+
+@use 'variables' as *;
+
+// ------------------------------------------------
+// Flexbox center
+// ------------------------------------------------
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ------------------------------------------------
+// Transicion generica
+// ------------------------------------------------
+@mixin transition($property: all, $duration: 0.3s, $timing: ease-in-out) {
+  transition: $property $duration $timing;
+}
+
+// ------------------------------------------------
+// Sombra con hover
+// ------------------------------------------------
+@mixin shadow-hover($shadow: $chirho-shadow) {
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: $shadow;
+  }
+}
+
+// ------------------------------------------------
+// Elevacion al hover (card effect)
+// ------------------------------------------------
+@mixin card-hover($translate: -5px) {
+  transition: $chirho-transition;
+
+  &:hover {
+    transform: translateY($translate);
+    box-shadow: $chirho-shadow;
+  }
+}
+
+// ------------------------------------------------
+// Tamano de icono (cuadrado)
+// ------------------------------------------------
+@mixin icon-size($size) {
+  width: $size;
+  height: $size;
+}
+
+// ------------------------------------------------
+// Circulo con icono centrado
+// ------------------------------------------------
+@mixin icon-circle($size: $icon-circle-size, $font-size: 1.25rem) {
+  @include icon-size($size);
+  @include flex-center;
+  border-radius: 50%;
+  font-size: $font-size;
+}
+
+// ------------------------------------------------
+// Object fit contain (para imagenes/logos)
+// ------------------------------------------------
+@mixin object-contain($width, $height: $width) {
+  width: $width;
+  height: $height;
+  object-fit: contain;
+}
+
+// ------------------------------------------------
+// Background con overlay gradient
+// ------------------------------------------------
+@mixin bg-overlay($color: $chirho-primary, $opacity-start: 0.85, $opacity-end: 0.9) {
+  background-image: linear-gradient(
+    rgba($color, $opacity-start),
+    rgba($color, $opacity-end)
+  );
+}
+
+// ------------------------------------------------
+// Responsive breakpoints
+// ------------------------------------------------
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == 'md' {
+    @media (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == 'lg' {
+    @media (max-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == 'xl' {
+    @media (max-width: $breakpoint-xl) {
+      @content;
+    }
+  } @else if $breakpoint == 'print' {
+    @media print {
+      @content;
+    }
+  }
+}
+
+// ------------------------------------------------
+// Focus visible (accesibilidad)
+// ------------------------------------------------
+@mixin focus-visible($color: $chirho-primary, $offset: 2px) {
+  &:focus-visible {
+    outline: 2px solid $color;
+    outline-offset: $offset;
+  }
+}
+
+// ------------------------------------------------
+// Truncar texto con ellipsis
+// ------------------------------------------------
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// ------------------------------------------------
+// Gradient de fondo lineal
+// ------------------------------------------------
+@mixin gradient-bg($start-color: $chirho-primary, $end-color: $chirho-primary-dark, $angle: 135deg) {
+  background: linear-gradient($angle, $start-color 0%, $end-color 100%);
+}
+
+// ------------------------------------------------
+// Boton base
+// ------------------------------------------------
+@mixin btn-base {
+  border-radius: $chirho-border-radius;
+  padding: $spacing-sm $spacing-lg;
+  font-weight: $chirho-font-weight-medium;
+  transition: $chirho-transition;
+}
+
+// ------------------------------------------------
+// Input/Form control base
+// ------------------------------------------------
+@mixin form-control-base {
+  border-radius: $chirho-border-radius;
+  padding: 0.75rem $spacing-md;
+  border: 1px solid $chirho-gray;
+  transition: $chirho-transition;
+}

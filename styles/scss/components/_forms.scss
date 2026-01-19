@@ -1,0 +1,26 @@
+// ================================================
+// FORMULARIOS
+// ================================================
+
+@use '../abstracts' as *;
+
+// ------------------------------------------------
+// Form controls
+// ------------------------------------------------
+.form-control,
+.form-select {
+  @include form-control-base;
+
+  &:focus {
+    border-color: $chirho-primary;
+    box-shadow: $chirho-shadow-focus;
+  }
+}
+
+// ------------------------------------------------
+// Labels
+// ------------------------------------------------
+.form-label {
+  font-weight: $chirho-font-weight-medium;
+  margin-bottom: $spacing-sm;
+}

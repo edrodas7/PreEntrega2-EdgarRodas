@@ -1,0 +1,48 @@
+// ================================================
+// RESET Y ESTILOS BASE
+// ================================================
+
+@use '../abstracts' as *;
+
+// ------------------------------------------------
+// Reset basico
+// ------------------------------------------------
+body {
+  margin: 0;
+  font-family: $chirho-font-family;
+  line-height: $chirho-line-height;
+  color: $chirho-dark;
+}
+
+// ------------------------------------------------
+// Scroll suave
+// ------------------------------------------------
+html {
+  scroll-behavior: smooth;
+}
+
+// ------------------------------------------------
+// Accesibilidad - Focus visible
+// ------------------------------------------------
+*:focus-visible {
+  outline: 2px solid $chirho-primary;
+  outline-offset: 2px;
+}
+
+// ------------------------------------------------
+// Variables CSS (para compatibilidad con Bootstrap)
+// ------------------------------------------------
+:root {
+  --chirho-primary: #{$chirho-primary};
+  --chirho-primary-light: #{$chirho-primary-light};
+  --chirho-primary-dark: #{$chirho-primary-dark};
+  --chirho-secondary: #{$chirho-secondary};
+  --chirho-accent: #{$chirho-accent};
+  --chirho-light: #{$chirho-light};
+  --chirho-dark: #{$chirho-dark};
+  --chirho-white: #{$chirho-white};
+  --chirho-shadow: #{$chirho-shadow};
+  --chirho-shadow-sm: #{$chirho-shadow-sm};
+  --chirho-transition: #{$chirho-transition};
+  --chirho-border-radius: #{$chirho-border-radius};
+}

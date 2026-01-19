@@ -1,0 +1,30 @@
+// ================================================
+// CARDS
+// ================================================
+
+@use '../abstracts' as *;
+
+// ------------------------------------------------
+// Card base
+// ------------------------------------------------
+.card {
+  border-radius: $chirho-border-radius;
+}
+
+// ------------------------------------------------
+// Service Card (con efecto hover)
+// ------------------------------------------------
+.service-card {
+  @include card-hover;
+  border-radius: $chirho-border-radius;
+  overflow: hidden;
+}
+
+// ------------------------------------------------
+// Card body responsive
+// ------------------------------------------------
+@include respond-to('sm') {
+  .card-body {
+    padding: $spacing-md;
+  }
+}

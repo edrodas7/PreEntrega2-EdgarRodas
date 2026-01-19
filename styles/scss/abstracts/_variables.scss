@@ -1,0 +1,78 @@
+// ================================================
+// VARIABLES SASS - CHIRHO
+// ================================================
+
+// ------------------------------------------------
+// Colores principales
+// ------------------------------------------------
+$chirho-primary: #2a4466;
+$chirho-primary-light: #3a5a7c;
+$chirho-primary-dark: #1a3456;
+$chirho-secondary: #6c757d;
+$chirho-accent: #17a2b8;
+
+// ------------------------------------------------
+// Colores neutros
+// ------------------------------------------------
+$chirho-light: #f8f9fa;
+$chirho-dark: #212529;
+$chirho-white: #ffffff;
+$chirho-gray: #dee2e6;
+$chirho-gray-dark: #e9ecef;
+
+// ------------------------------------------------
+// Sombras
+// ------------------------------------------------
+$chirho-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$chirho-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$chirho-shadow-focus: 0 0 0 0.2rem rgba($chirho-primary, 0.25);
+
+// ------------------------------------------------
+// Transiciones
+// ------------------------------------------------
+$chirho-transition: all 0.3s ease-in-out;
+$chirho-transition-fast: all 0.15s ease-in-out;
+
+// ------------------------------------------------
+// Border radius
+// ------------------------------------------------
+$chirho-border-radius: 0.5rem;
+$chirho-border-radius-lg: 1rem;
+
+// ------------------------------------------------
+// Tipografia
+// ------------------------------------------------
+$chirho-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$chirho-line-height: 1.6;
+$chirho-font-weight-normal: 400;
+$chirho-font-weight-medium: 500;
+
+// ------------------------------------------------
+// Breakpoints (para media queries)
+// ------------------------------------------------
+$breakpoint-sm: 575.98px;
+$breakpoint-md: 767.98px;
+$breakpoint-lg: 991.98px;
+$breakpoint-xl: 1199.98px;
+
+// ------------------------------------------------
+// Espaciado
+// ------------------------------------------------
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+// ------------------------------------------------
+// Dimensiones de elementos
+// ------------------------------------------------
+$icon-circle-size: 48px;
+$icon-circle-size-sm: 40px;
+$icon-box-size: 80px;
+$icon-box-size-sm: 60px;
+$logo-navbar-size: 40px;
+$logo-footer-size: 35px;
+$social-icon-size: 30px;
+$social-icon-size-sm: 25px;
+$btn-circle-size: 50px;

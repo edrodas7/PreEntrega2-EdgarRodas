@@ -1,0 +1,55 @@
+// ================================================
+// ICONOS
+// ================================================
+
+@use '../abstracts' as *;
+
+// ------------------------------------------------
+// Icon Circle (iconos pequenos en circulos)
+// ------------------------------------------------
+.icon-circle {
+  @include icon-circle($icon-circle-size, 1.25rem);
+}
+
+// ------------------------------------------------
+// Icon Box (iconos grandes)
+// ------------------------------------------------
+.icon-box {
+  @include icon-size($icon-box-size);
+  @include flex-center;
+}
+
+// ------------------------------------------------
+// Social Icons
+// ------------------------------------------------
+.social-icon {
+  @include object-contain($social-icon-size);
+  @include transition;
+  filter: brightness(0) invert(1);
+}
+
+.social-link {
+  &:hover .social-icon {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+// ------------------------------------------------
+// Responsive - Icons
+// ------------------------------------------------
+@include respond-to('md') {
+  .icon-box {
+    @include icon-size($icon-box-size-sm);
+  }
+
+  .social-icon {
+    @include icon-size($social-icon-size-sm);
+  }
+}
+
+@include respond-to('sm') {
+  .icon-circle {
+    @include icon-circle($icon-circle-size-sm, 1rem);
+  }
+}

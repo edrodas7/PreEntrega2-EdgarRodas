@@ -1,0 +1,72 @@
+// ================================================
+// HERO SECTION
+// ================================================
+
+@use '../abstracts' as *;
+
+// ------------------------------------------------
+// Hero section base
+// ------------------------------------------------
+.hero-section {
+  @include bg-overlay($chirho-primary, 0.85, 0.9);
+  background-image: linear-gradient(
+      rgba($chirho-primary, 0.85),
+      rgba($chirho-primary, 0.9)
+    ),
+    url('../assets/background_img_chirho.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 80vh;
+  @include flex-center;
+
+  // Titulo con sombra
+  h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  // Animacion del contenedor
+  .container {
+    animation: fadeInUp 0.8s ease-out;
+  }
+}
+
+// ------------------------------------------------
+// Responsive - Hero
+// ------------------------------------------------
+@include respond-to('lg') {
+  .hero-section {
+    min-height: 60vh;
+    background-attachment: scroll;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@include respond-to('md') {
+  .hero-section {
+    min-height: 50vh;
+
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    .lead {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include respond-to('sm') {
+  .hero-section {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .display-5 {
+    font-size: 1.5rem;
+  }
+}

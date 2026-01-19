@@ -1,0 +1,12 @@
+{
+  "name": "chirho-project",
+  "version": "1.0.0",
+  "description": "Proyecto Chirho",
+  "scripts": {
+    "sass": "sass styles/scss/main.scss styles/styles.css",
+    "sass:watch": "sass --watch styles/scss/main.scss styles/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.97.2"
+  }
+}
